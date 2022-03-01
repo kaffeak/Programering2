@@ -1,0 +1,5 @@
+# ignore elixir map
+.elixir_ls/**
+
+# ignore Canvas link
+Canvas*
