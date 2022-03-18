@@ -1,7 +1,7 @@
 defmodule Color do
 
   def convert(depth, max) do
-    a = (depth/max)*4
+    a = (depth/max)*10
     x = trunc(a)
     y = trunc(255*(a-x))
     case x do
@@ -10,6 +10,12 @@ defmodule Color do
       2 -> {:rgb ,255 - y, 255, 0}
       3 -> {:rgb ,0, 255, y}
       4 -> {:rgb ,0, 255 - y, 255}
+      5 -> {:rgb ,0, 255 - y, 255}
+      6 -> {:rgb ,0, 0, y}
+      7 -> {:rgb ,0, y, 255}
+      8 -> {:rgb ,0, 255, 255-y}
+      9 -> {:rgb ,y , 255, 0}
+      10 ->{:rgb ,y, 0, 255}
     end
   end
 

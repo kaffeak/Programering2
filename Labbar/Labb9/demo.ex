@@ -5,9 +5,9 @@ defmodule Demo do
   end
 
   def small(x0, y0, xn) do
-    width = 1080
-    height = 1080
-    depth = 255
+    width = 5000
+    height = 5000
+    depth = 1000
     k = (xn - x0)/width
     image = Mandel.mandelbrot(width-1, height-1, x0, y0, k, depth)
     PPM.write("small.ppm", image)
